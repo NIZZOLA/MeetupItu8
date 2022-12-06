@@ -12,10 +12,10 @@ public static class PedidoEndpoints
 
         group.MapPost("/", async (PedidoRequestModel request, [FromServices] QueueService service) =>
         {
-            request.Id = Guid.NewGuid();
+            request.RequestId = Guid.NewGuid();
             service.Publish(request);
 
-            return TypedResults.Created($"/api/PedidoModel/{request.Id}", request);
+            return TypedResults.Created($"/api/PedidoModel/{request.RequestId}", request);
         })
      .WithName("CreatePedidoModel");
     }

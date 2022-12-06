@@ -1,1 +1,0 @@
-{"Id":"442e2eb2-9105-4d4e-b116-1955eb252a6e","DataDaCompra":"2022-12-04T19:39:14.562Z","ClienteId":1,"Itens":[{"ProdutoId":1,"Quantidade":2,"Valor":29}],"Pagamentos":[{"Valor":29,"TipoDePagamento":0,"Vencimento":"2022-12-14T19:39:14.562Z","Pagamento":null,"ValorPago":null}]}
