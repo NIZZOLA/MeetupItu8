@@ -5,8 +5,7 @@ namespace PedidoApi;
 
 public static class PedidoEndpoints
 {
-
-    public static void MapPedidoModelEndpoints(this IEndpointRouteBuilder routes)
+    public static void MapPedidosEndpoints(this IEndpointRouteBuilder routes)
     {
         var group = routes.MapGroup("/api/Pedidos").WithTags("Pedidos");
 

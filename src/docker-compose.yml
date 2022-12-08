@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  pedidoapi:
+    image: ${DOCKER_REGISTRY-}pedidoapi
+    build:
+      context: .
+      dockerfile: PedidoApi/Dockerfile
+
+  receptordepedido:
+    image: ${DOCKER_REGISTRY-}receptordepedido
+    build:
+      context: .
+      dockerfile: ReceptorDePedido/Dockerfile
+
