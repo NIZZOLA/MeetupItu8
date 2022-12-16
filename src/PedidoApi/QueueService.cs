@@ -1,4 +1,6 @@
-﻿using BackOffice.WebApi.Contracts;
+﻿using BackOffice.Domain.Entities.Configuration;
+using BackOffice.WebApi.Contracts;
+using Microsoft.Extensions.Options;
 using RabbitMQ.Client;
 using System.Text;
 using System.Text.Json;
@@ -7,13 +9,16 @@ namespace PedidoApi;
 
 public class QueueService
 {
+    private readonly RabbitMqConfiguration _config;
+    public QueueService(IOptions<RabbitMqConfiguration> options)
+    {
+        _config = options.Value;
+    }
+
     public void Publish(PedidoRequestModel pedido)
     {
-        var factory = new ConnectionFactory();
-        factory.UserName = "guest";
-        factory.Password = "guest";
-        factory.HostName = "192.168.15.4";
-
+        var factory = new ConnectionFactory() { HostName = _config.Host, UserName = _config.Username, Password = _config.Password };
+       
         string exchangeName = "Ecommerce";
 
         using (var conn = factory.CreateConnection())

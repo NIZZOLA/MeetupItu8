@@ -8,6 +8,7 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
 COPY ["PedidoApi/PedidoApi.csproj", "PedidoApi/"]
+COPY ["BackOffice.Domain/BackOffice.Domain.csproj", "BackOffice.Domain/"]
 RUN dotnet restore "PedidoApi/PedidoApi.csproj"
 COPY . .
 WORKDIR "/src/PedidoApi"

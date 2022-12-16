@@ -9,6 +9,7 @@ namespace BackOffice.Domain.Entities;
 
 public class PedidoModel : BaseModel
 {
+    public Guid? RequestId { get; set; }
     public DateTime DataDaCompra { get; set; }
     public PedidoStatusEnum Status { get; set; }
 
