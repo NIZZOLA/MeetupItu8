@@ -3,7 +3,7 @@
   <PropertyGroup Label="Globals">
     <ProjectVersion>2.1</ProjectVersion>
     <DockerTargetOS>Linux</DockerTargetOS>
-    <ProjectGuid>286021b4-8ad8-4e6d-bf60-5bc7d985db75</ProjectGuid>
+    <ProjectGuid>58c92100-e8f0-45d5-90d3-91b1447c52e4</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/swagger</DockerServiceUrl>
     <DockerServiceName>pedidoapi</DockerServiceName>
